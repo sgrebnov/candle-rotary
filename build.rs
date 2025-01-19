@@ -53,7 +53,7 @@ fn main() -> Result<()> {
     println!("cargo:rustc-link-lib=rotary");
     println!("cargo:rustc-link-lib=dylib=cudart");
     if !target.contains("msvc") {
-        rintln!("cargo:rustc-link-lib=dylib=stdc++");
+        println!("cargo:rustc-link-lib=dylib=stdc++");
     }
 
     Ok(())
