@@ -28,7 +28,7 @@ fn main() -> Result<()> {
         }
     };
 
-    let target = env::var("TARGET").expect("The 'TARGET' environment variable MUST be set");
+    let target = std::env::var("TARGET").expect("The 'TARGET' environment variable MUST be set");
 
     let kernels : Vec<_>= KERNEL_FILES.iter().collect();
     let builder = bindgen_cuda::Builder::default().kernel_paths(kernels).out_dir(build_dir.clone())
